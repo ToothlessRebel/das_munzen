@@ -16,7 +16,7 @@ any issues.
 
 1. `cd /path/to/local/repo`
 2. `./artisan serve`
-3. Visit [the demo](https://localhost:8080).
+3. Visit URI given in the command output (Example: `Starting Laravel development server: http://127.0.0.1:8000`).
 
 ## Usage via the command line.
 In addition to web based use this project provides a command line interface to provide the functionality of
