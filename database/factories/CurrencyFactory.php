@@ -22,7 +22,9 @@ class CurrencyFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->name,
+            'symbol' => $this->faker->randomLetter(),
+            'abbreviation' => $this->faker->currencyCode(),
         ];
     }
 }

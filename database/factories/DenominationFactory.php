@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Currency;
 use App\Models\Denomination;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -22,7 +23,9 @@ class DenominationFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'currency_id' => Currency::factory()->create()->id,
+            'name' => $this->faker->name,
+            'value' => $this->faker->randomFloat(),
         ];
     }
 }

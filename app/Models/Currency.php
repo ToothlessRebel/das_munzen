@@ -13,6 +13,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property string $symbol
  * @property string $abbreviation
  * @property string $name
+ * @property-read int $id
  * @property-read Collection $denominations
  */
 class Currency extends Model
