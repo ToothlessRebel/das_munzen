@@ -37,6 +37,8 @@ export default {
     },
     methods: {
         convert() {
+            this.errors = undefined;
+            this.coins = undefined;
             axios.get('/api/convert/USD?value=' + this.total)
                 .then(response => this.coins = response.data)
                 .catch(error => {
