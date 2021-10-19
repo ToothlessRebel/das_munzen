@@ -1,9 +1,8 @@
 {
-    "name": "laravel/laravel",
+    "name": "toothlessrebel/das-munzen",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Coin Conversion Demo",
     "keywords": [
-        "framework",
         "laravel"
     ],
     "license": "MIT",
@@ -47,13 +46,17 @@
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
             "touch database/munzen.sqlite",
-            "@php artisan db:migrate",
+            "@php artisan migrate",
             "@php artisan db:seed --class=UsdSeeder",
             "npm install",
             "npm run dev"
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
+        ],
+        "setup": [
+            "composer install",
+            "composer run-script post-root-package-install"
         ]
     },
     "extra": {

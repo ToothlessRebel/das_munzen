@@ -7,7 +7,7 @@ A small API and web interface for converting monetary values into coins.
 1. Clone the repository:
 `git clone git@github.com:ToothlessRebel/das_munzen.git path/to/local/repo`
 1. `cd path/to/local/repo`
-1. `composer install`
+1. `composer setup`
 
 ## Usage via the browser
 This project provides a basic, locally hosted demo. The actual port of the server may vary based on the 
