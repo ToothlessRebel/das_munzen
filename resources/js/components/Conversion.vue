@@ -6,7 +6,7 @@
         <div class="text-2xl">
             <div>
                 <label>
-                    How much have you got?
+                    How much have you got? (In USD)
                     <input type="number" step="0.01" min="0" name="value" class="rounded-2xl" v-model="total"/>
                 </label>
                 <button class="rounded-2xl bg-green-600 border-green-600 text-white p-3" @click="convert">Cha-ching!</button>
