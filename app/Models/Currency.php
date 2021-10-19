@@ -20,6 +20,12 @@ class Currency extends Model
 {
     use HasFactory;
 
+    /** @noinspection PhpMissingReturnTypeInspection */
+    public function getRouteKeyName()
+    {
+        return 'abbreviation';
+    }
+
     public function denominations(): HasMany
     {
         return $this->hasMany(Denomination::class);

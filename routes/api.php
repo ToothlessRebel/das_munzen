@@ -1,6 +1,8 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Facades\Money;
+use App\Http\Requests\ConversionRequest;
+use App\Models\Currency;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+
+Route::get('/convert/{currency}', function (ConversionRequest $request, Currency $currency) {
+    return response()->json(Money::convertToArray($request->input('value'), $currency));
 });

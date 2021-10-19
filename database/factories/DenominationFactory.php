@@ -25,7 +25,7 @@ class DenominationFactory extends Factory
         return [
             'currency_id' => Currency::factory()->create()->id,
             'name' => $this->faker->name,
-            'value' => $this->faker->randomFloat(),
+            'value' => $this->faker->randomFloat(3, 0.001),
         ];
     }
 }
